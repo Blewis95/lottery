@@ -89,18 +89,7 @@ def one_off_array(winning_array,participants_array)
 		end
 
 
-		#breaking code for some reason
-
-		# for i in 0..(one_off.length - 1)
-		# 	if one_off[i] < 1000
-		# 		holder = one_off[i]
-		# 		one_off[i] = '0' + holder.to_s
-		# 	else
-		# 		holder = one_off[i]
-		# 		one_off[i] = holder.to_s
-		# 	end
-
-		# end
+		
 
 		#puts one_off
 
@@ -161,25 +150,10 @@ def losing_numbers_array(winning_array,participants_array)
 			winning_numbers.push(winning_array[i])
 		end
 
-		#breaking code
-
-		# for i in 0..(winning_numbers.length - 1)
-		# 	if winning_numbers[i] < 1000
-		# 		holder = winning_numbers[i]
-		# 		winning_numbers[i] = '0' + holder.to_s
-		# 	else
-		# 		holder = winning_numbers[i]
-		# 		winning_numbers[i] = holder.to_s
-		# 	end
-
-		# end
+		
 
 
-		#should be used after finding the matching numbers
-		# array_length = array.length
-		# array_length.times do |x|
-		# 	array[x] = array[x].to_s
-		# end
+		
 
 		for i in 0..(participants_array.length - 1)
 			if (winning_numbers.include?(participants_array[i]) == false)
