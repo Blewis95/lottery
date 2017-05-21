@@ -7,7 +7,6 @@ def winning__numbers_array(winning_array,participants_array)
 		return "Error, 2nd entry must be an Array of numbers"
 	else
 	
-
 		winning_array.each do |x|
 	
 			element1 = x
@@ -19,7 +18,6 @@ def winning__numbers_array(winning_array,participants_array)
 			end
 
 		end
-
 
 		participants_array.each do |x|
 	
@@ -55,7 +53,6 @@ def one_off_array(winning_array,participants_array)
 		return "Error, 2nd entry must be an Array of numbers"
 	else
 	
-
 		winning_array.each do |x|
 	
 			element1 = x
@@ -67,7 +64,6 @@ def one_off_array(winning_array,participants_array)
 			end
 
 		end
-
 
 		participants_array.each do |x|
 	
@@ -87,9 +83,6 @@ def one_off_array(winning_array,participants_array)
 				one_off.push(winning_array[i] + 10**j)
 			end
 		end
-
-
-		
 
 		#puts one_off
 
@@ -111,10 +104,15 @@ def losing_numbers_array(winning_array,participants_array)
 	final_array = Array.new
 
 	if winning_array.class != Array
+
 		return "Error, 1st entry must be an Array of numbers"
+
 	elsif participants_array.class != Array
+
 		return "Error, 2nd entry must be an Array of numbers"
+
 	else
+
 		winning_array.each do |x|
 	
 			element1 = x
@@ -124,9 +122,7 @@ def losing_numbers_array(winning_array,participants_array)
 			elsif ((element1 % 10000) != x )
 				return "Error, entries must be 4 digits"
 			end
-
 		end
-
 
 		participants_array.each do |x|
 	
@@ -140,8 +136,6 @@ def losing_numbers_array(winning_array,participants_array)
 
 		end
 
-
-
 		for i in 0..(winning_array.length - 1)
 			for j in 0..3
 				winning_numbers.push(winning_array[i] - 10**j)
@@ -149,11 +143,6 @@ def losing_numbers_array(winning_array,participants_array)
 			end
 			winning_numbers.push(winning_array[i])
 		end
-
-		
-
-
-		
 
 		for i in 0..(participants_array.length - 1)
 			if (winning_numbers.include?(participants_array[i]) == false)
